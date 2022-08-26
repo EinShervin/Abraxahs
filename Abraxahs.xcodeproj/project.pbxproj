@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6827CDD028B7A397001326C7 /* AbraxahsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827CDCF28B7A397001326C7 /* AbraxahsApp.swift */; };
-		6827CDD228B7A397001326C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827CDD128B7A397001326C7 /* ContentView.swift */; };
+		6827CDD228B7A397001326C7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827CDD128B7A397001326C7 /* LoginView.swift */; };
 		6827CDD428B7A39A001326C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6827CDD328B7A39A001326C7 /* Assets.xcassets */; };
 		6827CDD728B7A39A001326C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6827CDD628B7A39A001326C7 /* Preview Assets.xcassets */; };
 		6827CDE128B7A39A001326C7 /* AbraxahsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827CDE028B7A39A001326C7 /* AbraxahsTests.swift */; };
@@ -19,6 +19,8 @@
 		6827CE0228B7B131001326C7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6827CE0128B7B131001326C7 /* FirebaseDatabase */; };
 		6827CE0428B7BC2A001326C7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6827CE0328B7BC2A001326C7 /* Storyboard.storyboard */; };
 		68985D1328B8AD5900378C5C /* Storyboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68985D1228B8AD5900378C5C /* Storyboard-iPad.storyboard */; };
+		68985D1528B8C19C00378C5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68985D1428B8C19C00378C5C /* GoogleService-Info.plist */; };
+		68985D1D28B8F32E00378C5C /* TableThing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68985D1C28B8F32E00378C5C /* TableThing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,7 @@
 /* Begin PBXFileReference section */
 		6827CDCC28B7A397001326C7 /* Abraxahs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Abraxahs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6827CDCF28B7A397001326C7 /* AbraxahsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbraxahsApp.swift; sourceTree = "<group>"; };
-		6827CDD128B7A397001326C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6827CDD128B7A397001326C7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6827CDD328B7A39A001326C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6827CDD628B7A39A001326C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6827CDDC28B7A39A001326C7 /* AbraxahsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbraxahsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,9 +51,10 @@
 		6827CDE628B7A39A001326C7 /* AbraxahsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbraxahsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6827CDEA28B7A39A001326C7 /* AbraxahsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbraxahsUITests.swift; sourceTree = "<group>"; };
 		6827CDEC28B7A39A001326C7 /* AbraxahsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbraxahsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6827CDFB28B7AF6C001326C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6827CE0328B7BC2A001326C7 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		68985D1228B8AD5900378C5C /* Storyboard-iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Storyboard-iPad.storyboard"; sourceTree = "<group>"; };
+		68985D1428B8C19C00378C5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		68985D1C28B8F32E00378C5C /* TableThing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableThing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +108,14 @@
 		6827CDCE28B7A397001326C7 /* Abraxahs */ = {
 			isa = PBXGroup;
 			children = (
+				68985D1428B8C19C00378C5C /* GoogleService-Info.plist */,
 				6827CDCF28B7A397001326C7 /* AbraxahsApp.swift */,
-				6827CDD128B7A397001326C7 /* ContentView.swift */,
+				6827CDD128B7A397001326C7 /* LoginView.swift */,
 				6827CDD328B7A39A001326C7 /* Assets.xcassets */,
-				6827CDFB28B7AF6C001326C7 /* GoogleService-Info.plist */,
 				6827CDD528B7A39A001326C7 /* Preview Content */,
 				6827CE0328B7BC2A001326C7 /* Storyboard.storyboard */,
 				68985D1228B8AD5900378C5C /* Storyboard-iPad.storyboard */,
+				68985D1C28B8F32E00378C5C /* TableThing.swift */,
 			);
 			path = Abraxahs;
 			sourceTree = "<group>";
@@ -255,6 +259,7 @@
 			files = (
 				6827CDD728B7A39A001326C7 /* Preview Assets.xcassets in Resources */,
 				68985D1328B8AD5900378C5C /* Storyboard-iPad.storyboard in Resources */,
+				68985D1528B8C19C00378C5C /* GoogleService-Info.plist in Resources */,
 				6827CDD428B7A39A001326C7 /* Assets.xcassets in Resources */,
 				6827CE0428B7BC2A001326C7 /* Storyboard.storyboard in Resources */,
 			);
@@ -281,7 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6827CDD228B7A397001326C7 /* ContentView.swift in Sources */,
+				68985D1D28B8F32E00378C5C /* TableThing.swift in Sources */,
+				6827CDD228B7A397001326C7 /* LoginView.swift in Sources */,
 				6827CDD028B7A397001326C7 /* AbraxahsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

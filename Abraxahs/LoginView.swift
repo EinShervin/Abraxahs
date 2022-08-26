@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import UIKit
+import FirebaseAuth
 
-struct ContentView: View {
-    @State private var username = "";
+struct LoginView: View {
+    @State private var email = "";
     @State private var password = "";
-    @State private var wrongUsername = 0;
+    @State private var wrongEmail = 0;
     @State private var wrongPassword = 0;
     @State private var showingLoginScreen = false;
     
@@ -32,12 +34,12 @@ struct ContentView: View {
                         .font(.largeTitle)
                         .bold()
                         .padding();
-                    TextField("Username", text: $username)
+                    TextField("Email", text: $email)
                         .padding()
                         .frame(width: 300, height: 50)
                         .background(Color.black.opacity(0.05))
                         .cornerRadius(10)
-                        .border(.red, width: CGFloat(wrongUsername));
+                        .border(.red, width: CGFloat(wrongEmail));
                     SecureField("Password", text: $password)
                         .padding()
                         .frame(width: 300, height: 50)
@@ -46,40 +48,52 @@ struct ContentView: View {
                         .border(.red, width: CGFloat(wrongPassword));
                     
                     Button("Login") {
-                        authenticateUser(username: username, password: password);
+                        authenticateUser(email: email, password: password);
                     }
                     .foregroundColor(.white)
                     .frame(width: 300, height: 50)
                     .background(Color.blue)
                     .cornerRadius(10);
                     
-                    NavigationLink(destination: Text("You are logged in @\(username)"), isActive: $showingLoginScreen) {
-                        EmptyView()
+                    NavigationLink(destination: GroupsView(), isActive: $showingLoginScreen) {
                     }
                 }
             }
         }
-        .navigationBarHidden(true)
     }
     
-    func authenticateUser(username: String, password: String) {
-        if username.lowercased() == "leandro187" {
-            wrongUsername = 0;
-            if password.lowercased() == "abc123" {
+    func authenticateUser(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if let user = user {
+                wrongEmail = 0;
                 wrongPassword = 0;
                 showingLoginScreen = true;
             } else {
-                wrongPassword = 2;
+                wrongEmail = 2;
+                wrongPassword = 2
             }
-        } else {
-            wrongUsername = 2;
         }
+    }
+}
+
+struct GroupsView: View {
+    var body: some View {
+        VStack {
+            Text("Hello World ok");
+            
+        }.navigationTitle("Gruppen")
+            .toolbar {
+                NavigationLink(destination: LoginView(), label: {
+                    Text("Logout")
+                        .bold()
+                })
+            }.navigationBarBackButtonHidden(true);
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LoginView()
             .previewDevice("iPhone 11 Pro")
             .previewInterfaceOrientation(.portrait)
     }
